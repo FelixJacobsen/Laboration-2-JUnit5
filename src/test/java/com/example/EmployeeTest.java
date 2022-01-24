@@ -14,5 +14,11 @@ public class EmployeeTest {
         assertThat(result).isEqualTo("Employee [id=" + employee.getId() + ", salary=" + employee.getSalary() + "]");
     }
 
+    @Test
+    void adding100ToSalaryShouldReturn200() {
+        employee.setSalary(employee.getSalary() + 100);
+        var result = employee.getSalary();
+        assertThat(result).isEqualTo(200);
+    }
 
 }
