@@ -21,4 +21,11 @@ public class EmployeeTest {
         assertThat(result).isEqualTo(200);
     }
 
+    @Test
+    void changingIdToTwoShouldReturn2(){
+        employee.setId("2");
+        var result = employee.getId();
+        assertThat(result).isEqualTo("2");
+    }
+
 }
