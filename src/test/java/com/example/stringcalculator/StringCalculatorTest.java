@@ -12,4 +12,9 @@ public class StringCalculatorTest {
         assertThat(stringCalculator.add("")).isEqualTo(0);
     }
 
+    @Test
+    void addNumberAsStringShouldReturnIntValue(){
+        assertThat(stringCalculator.add("5,3")).isEqualTo(8);
+    }
+
 }
