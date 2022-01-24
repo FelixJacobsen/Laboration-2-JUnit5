@@ -13,8 +13,13 @@ public class StringCalculatorTest {
     }
 
     @Test
-    void addNumberAsStringShouldReturnIntValue(){
+    void addNumbersAsStringShouldReturnIntValue(){
         assertThat(stringCalculator.add("5,3")).isEqualTo(8);
+    }
+
+    @Test
+    void addNumbersSeparatedByNewLine(){
+        assertThat(stringCalculator.add("5\n2,1")).isEqualTo(8);
     }
 
 }

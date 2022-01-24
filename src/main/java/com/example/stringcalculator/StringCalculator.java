@@ -14,7 +14,7 @@ public class StringCalculator {
     }
 
     private int convertToInt(String numbers) {
-        Stream<String> converter = Arrays.stream((numbers.split(",")));
+        Stream<String> converter = Arrays.stream((numbers.split(",|\n")));
         return converter.mapToInt(Integer::parseInt).sum();
     }
 
