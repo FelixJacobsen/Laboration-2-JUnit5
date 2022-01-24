@@ -34,4 +34,11 @@ public class StringCalculatorTest {
                 .hasMessageContaining("Negative numbers is not allowed! Numbers:-3,-5");
     }
 
+    @Test
+    void numbersHigherThan1000ShouldBeIgnore(){
+        assertThat(stringCalculator.add("//;\n1001;8")).isEqualTo(8);
+    }
+
+
+
 }

@@ -42,6 +42,7 @@ public class StringCalculator {
         return Stream.of(numbers.split(delimiter))
                 .filter(this::isNumeric)
                 .mapToInt(Integer::parseInt)
+                .filter(s -> s < 1001)
                 .sum();
     }
 
