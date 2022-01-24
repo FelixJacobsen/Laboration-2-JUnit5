@@ -22,10 +22,17 @@ public class EmployeeTest {
     }
 
     @Test
-    void changingIdToTwoShouldReturn2(){
+    void changingIdToTwoShouldReturn2() {
         employee.setId("2");
         var result = employee.getId();
         assertThat(result).isEqualTo("2");
+    }
+
+    @Test
+    void settingIsPaidToTrueShouldReturnTrue() {
+        employee.setPaid(true);
+        var result = employee.isPaid();
+        assertThat(result).isTrue();
     }
 
 }
