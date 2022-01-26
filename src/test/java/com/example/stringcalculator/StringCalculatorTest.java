@@ -14,7 +14,7 @@ public class StringCalculatorTest {
     }
 
     @Test
-    void addNumbersAsStringShouldReturn13(){
+    void addNumbersAsStringShouldReturn8(){
         assertThat(stringCalculator.add("5,3")).isEqualTo(8);
     }
 
@@ -37,6 +37,11 @@ public class StringCalculatorTest {
     @Test
     void numbersHigherThan1000ShouldBeIgnore(){
         assertThat(stringCalculator.add("//;\n1001;8")).isEqualTo(8);
+    }
+
+    @Test
+    void customizedDelimiterShouldReturnSix(){
+        assertThat(stringCalculator.add("//[***]\n1***2***3")).isEqualTo(6);
     }
 
 
