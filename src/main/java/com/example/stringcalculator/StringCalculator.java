@@ -15,12 +15,11 @@ public class StringCalculator {
             return 0;
 
 
-        if(numbers.startsWith("//[")){
+        if (numbers.startsWith("//[")) {
             customDelimiter(numbers);
-        } else if (numbers.startsWith("//")){
+        } else if (numbers.startsWith("//")) {
             delimiter = numbers.charAt(2) + "|\n";
         }
-
 
 
         if (numbers.contains("-"))
@@ -37,7 +36,7 @@ public class StringCalculator {
 
     private void buildDelimiter(Matcher matcher) {
         StringBuilder stringBuilder = new StringBuilder();
-        while(matcher.find()) {
+        while (matcher.find()) {
             stringBuilder
                     .append("\\Q")
                     .append(matcher.group(), 1, matcher.group().length() - 1)
